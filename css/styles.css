@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.logo {
+    max-width: 10rem;
+    margin-bottom: 8px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style-type: none;
+    gap: 1rem;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #1c1c1c;
+}
+
+.open-menu,
+.close-menu {
+    display: none;
+}
+
+/* RESPONSIVE HEADER---------------------------------- */
+
+@media screen and (max-width: 550px) {
+
+    .open-menu,
+    .close-menu {
+        display: block;
+        border: 0;
+        font-size: 1.5rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .open-menu {
+        color: rgb(88, 10, 88);
+    }
+
+    .close-menu {
+        color: white;
+    }
+
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(88, 10, 88);
+        padding: 1rem;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
+
+    }
+
+    nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-menu li a {
+        color: white;
+    }
+
+}
+
+/* END RESPONSIVE HEADER ---------------*/
+
+body {
+    background-color: white;
+}
+
+/* HOME -------------------------------------- */
+
+.home_container,
+.about_container {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    margin-bottom: 40px;
+}
+
+.home_subtitle {
+    font-size: 36px;
+    color: black;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 20px;
+    justify-content: start;
+}
+
+.home_title {
+    color: purple;
+    font-weight: bold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 80px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: max-content;
+    justify-content: start;
+}
+
+p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: black;
+    margin-top: 47px;
+    display: flex;
+}
+
+
+.home_photo,
+.about_photo {
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+
+}
+
+.home_social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.home_social_icon {
+    color: #1c1c1c;
+    font-size: 2rem;
+
+}
+
+/* END HOME----------------------------------- */
+
+/* RESPONSIVE home about & portfolio---------------- */
+
+@media (max-width: 480px) {
+
+
+    
+}
+
+@media (max-width: 768px) {
+
+    .home_container,
+    .about_container,
+    .portfolio_container {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        justify-content: center;
+        margin-bottom: 40px;
+        width: 100%;
+        height: auto;
+    }
+
+    .home_subtitle {
+        font-size: 32px;
+    }
+
+    .home_title {
+        font-size: 70px;
+        line-height: 70px;
+    }
+
+    .home_container p {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .about_info {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .about_info p {
+        font-size: 18px;
+        line-height: normal;
+        text-align: center;
+    }
+
+}
+
+/* END RESPONSIVE home about & portfolio-------------------- */
+
+/* ABOUT ME --------------------------------*/
+
+.subtitles h1 {
+    color: #1c1c1c;
+    font-weight: bold;
+    font-style: normal;
+    font-weight: 600;
+    text-align: center;
+}
+
+.about_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.about_icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.circle_icon {
+    width: 125px;
+    height: 125px;
+    border: 1px solid purple;
+    border-radius: 50%;
+    background-color: white;
+    margin-inline: 10px;
+}
+
+.circle_icon h3 {
+    color: #1f1f1f;
+    font-size: 13px;
+    text-align: center;
+    font-weight: 600;
+    padding-top: 15px;
+}
+
+.about_text p {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.CV_button {
+    border-radius: 30px;
+    width: 194px;
+    height: 57px;
+    flex-shrink: 0;
+    background: purple;
+    border: none;
+    color: white;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.CV_button a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.circle_icon p {
+    color: #1c1c1c;
+    font-size: 14px;
+    justify-content: center;
+}
+
+.circle_icon i {
+    color: #1c1c1c;
+    font-size: 1.5rem;
+    padding: 1rem 3rem;
+}
+
+/* END ABOUT ME --------------------------------*/
+
+/* footer---------------------------------*/
+.footer {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.footer img {
+    max-width: 8rem;
+}
+
+/* END FOOTER ---------------------------------*/
+
+/* PORTFOLIO ----------------*/
+
+.portfolio_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.rounded mx-auto d-block {
+    text-align: center;
+}
+
+.portfolio_container img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .portfolio_container {
+        width: 100%;
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* END PORTFOLIO ---------------------------------*/
+
+/* SERVICES ----------------------------------*/
+.services_container {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.card {
+    border: 1px solid purple !important;
+    z-index: -1;
+}
+
+.subtitles p {
+    padding-inline: 20px;
+    justify-content: center;
+
+}
+
+.card img {
+    width: 100px;
+    margin: 1rem;
+}
+
+.card-body h4 {
+    font-weight: 600;
+}
+
+.subtitles p {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .services_container{
+        width: 100%;
+        height: auto;
+    }
+
+    .card img {
+        width: 50px;
+        margin: 1rem;
+    }
+    .card {
+        width: 167px;
+        height: 212px;
+    }
+
+    .subtitles p {
+        font-size: 14px;
+        line-height: normal;
+        padding: 10px;
+    }
+
+    .card-title,
+    .frame_background h4 {
+        font-size: 12px;
+    }
+
+    .card-text {
+        font-size: 12px;
+        line-height: normal;
+    }
+}
+
+/* END SERVICES ---------------------*/
+
+/* CONTACT ---------------------*/
+.contact_container {
+
+    border-radius: 30px;
+    border: 1px solid #000;
+    background: white;
+    width: 900px;
+    height: 520px;
+    padding-inline: 3rem;
+    padding-block: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    gap: 3rem;
+    align-content: center;
+    margin: auto;
+    margin-bottom: 40px;
+    border: 1px solid purple;
+
+}
+
+.contact_text_container,
+.form_container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_text {
+    line-height: normal;
+    justify-content: center;
+    display: flex;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+.form_subtitle {
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.contact_subtitle {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.contact_icons {
+    display: grid;
+    row-gap: 1rem;
+}
+
+.contact_icons a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.mb-3 {
+    border-radius: 30px;
+}
+
+
+
+@media (max-width: 768px) {
+    .contact_container {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        justify-content: center;
+        margin-bottom: 40px;
+        width: 100%;
+        height: auto;
+    }
+
+    .contact_text {
+        font-size: 13px;
+    }
+
+    .contact_icons a{
+        font-size: 13px;
+
+    }
+
+    .contact_text {
+        margin-bottom: 30px;
+    }
+}
+
+/* END CONTACT ---------------------*/
