@@ -1,0 +1,105 @@
+.contact_container {
+
+    border-radius: 30px;
+    border: 1px solid $thirdColor;
+    background: $mainColor;
+    width: 900px;
+    height: 520px;
+    padding-inline: 3rem;
+    padding-block: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    gap: 3rem;
+    align-content: center;
+    margin: auto;
+    margin-bottom: 40px;
+    border: 1px solid $secondColor;
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        justify-content: center;
+        margin-bottom: 40px;
+        width: 100%;
+        height: auto;
+    }
+
+    .contact_text_container {
+        display: flex;
+        flex-direction: column;
+
+        .contact_subtitle {
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .contact_text {
+            line-height: normal;
+            justify-content: center;
+            display: flex;
+            font-size: 18px;
+            margin-bottom: 50px;
+
+            @include tablet {
+                font-size: 13px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .contact_icons {
+            display: grid;
+            row-gap: 1rem;
+
+
+            a {
+                text-decoration: none;
+                font-size: 18px;
+                color:$thirdColor;
+
+                @include tablet {
+                    font-size: 13px;
+                }
+            }
+        }
+
+    }
+
+    .form_container {
+        display: flex;
+        flex-direction: column;
+
+        .form_subtitle {
+            margin-bottom: 10px;
+            font-weight: 600;
+
+            .mb-3 {
+                border-radius: 30px;
+            }   
+        }
+
+        .CV_button {
+            border-radius: 30px;
+            width: 194px;
+            height: 57px;
+            flex-shrink: 0;
+            background: $secondColor;
+            border: none;
+            color: $mainColor;
+            text-align: center;
+            font-family: $fontPoppins;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+
+            a {
+                text-decoration: none;
+                color: $mainColor;
+                background: $secondColor;
+            }
+
+        }
+    }
+
+}

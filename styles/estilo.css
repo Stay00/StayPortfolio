@@ -1,0 +1,211 @@
+
+/* RESPONSIVE HEADER---------------------------------- */
+
+@media screen and (max-width: 550px) {
+
+    .open-menu,
+    .close-menu {
+        display: block;
+        border: 0;
+        font-size: 1.5rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .open-menu {
+        color: rgb(88, 10, 88);
+    }
+
+    .close-menu {
+        color: white;
+    }
+
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgb(88, 10, 88);
+        padding: 1rem;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
+
+    }
+
+    nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-menu li a {
+        color: white;
+    }
+
+}
+
+/* END RESPONSIVE HEADER ---------------*/
+
+body {
+    background-color: white;
+}
+
+/* HOME -------------------------------------- */
+
+
+/* END HOME----------------------------------- */
+
+/* RESPONSIVE home about & portfolio---------------- */
+
+@media (max-width: 480px) {
+
+
+    
+}
+
+@media (max-width: 768px) {
+
+    .home_container,
+    .about_container,
+    .portfolio_container {
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        justify-content: center;
+        margin-bottom: 40px;
+        width: 100%;
+        height: auto;
+    }
+
+    .home_subtitle {
+        font-size: 32px;
+    }
+
+    .home_title {
+        font-size: 70px;
+        line-height: 70px;
+    }
+
+    .home_container p {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+    .about_info {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .about_info p {
+        font-size: 18px;
+        line-height: normal;
+        text-align: center;
+    }
+
+}
+
+/* END RESPONSIVE home about & portfolio-------------------- */
+
+/* ABOUT ME --------------------------------*/
+
+
+/* END ABOUT ME --------------------------------*/
+
+/* footer---------------------------------*/
+
+
+/* END FOOTER ---------------------------------*/
+
+/* PORTFOLIO ----------------*/
+
+
+
+@media (max-width: 768px) {
+    .portfolio_container {
+        width: 100%;
+        height: auto;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* END PORTFOLIO ---------------------------------*/
+
+/* SERVICES ----------------------------------*/
+
+
+@media (max-width: 768px) {
+
+    .services_container{
+        width: 100%;
+        height: auto;
+    }
+
+    .card img {
+        width: 50px;
+        margin: 1rem;
+    }
+    .card {
+        width: 167px;
+        height: 212px;
+    }
+
+    .subtitles p {
+        font-size: 14px;
+        line-height: normal;
+        padding: 10px;
+    }
+
+    .card-title,
+    .frame_background h4 {
+        font-size: 12px;
+    }
+
+    .card-text {
+        font-size: 12px;
+        line-height: normal;
+    }
+}
+
+/* END SERVICES ---------------------*/
+
+/* CONTACT ---------------------*/
+
+
+@media (max-width: 768px) {
+    .contact_container {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        justify-content: center;
+        margin-bottom: 40px;
+        width: 100%;
+        height: auto;
+    }
+
+    .contact_text {
+        font-size: 13px;
+    }
+
+    .contact_icons a{
+        font-size: 13px;
+
+    }
+
+    .contact_text {
+        margin-bottom: 30px;
+    }
+}
+
+/* END CONTACT ---------------------*/

@@ -1,0 +1,92 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+
+    .logo {
+        max-width: 10rem;
+        margin-bottom: 8px;
+    }
+
+    .nav-menu {
+        display: flex;
+        list-style-type: none;
+        gap: 1rem;
+
+        a {
+            text-decoration: none;
+            color: $thirdColor;
+        }
+    }
+
+    .open-menu,
+    .close-menu {
+        display: none;
+        font-size: 2.5rem;
+    }
+
+    @include mobile {
+
+        .open-menu,
+        .close-menu {
+            display: block;
+            border: 0;
+            font-size: 2rem;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .open-menu {
+            color: $secondColor;
+        }
+
+        .close-menu {
+            color: $mainColor;
+
+            .bi {
+            background-color: $secondColor;
+
+            }
+        }
+
+
+        .nav {
+            opacity: 0;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 1rem;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background-color: $secondColor;
+            padding: 1rem;
+            box-shadow: 0 0 0 100vmax $thirdColor;
+            z-index: 1;
+
+        }
+
+        nav.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .nav-menu {
+            flex-direction: column;
+            align-items: end;
+            background-color: $secondColor;
+
+            a {
+                color: $mainColor;
+                background-color: $secondColor;
+                padding-bottom: 15px;
+                padding-top: 15px;
+                font-size: 18px;
+            }
+        }
+
+    }
+}
