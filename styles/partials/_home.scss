@@ -13,7 +13,6 @@ body {
         grid-template-columns: 1fr;
         display: flex;
         flex-direction: column;
-        margin: 15px;
         justify-content: center;
         margin-bottom: 40px;
         width: 100%;
@@ -40,12 +39,11 @@ body {
     .home_title {
         -webkit-animation:tilt-in-fwd-tl .7s cubic-bezier(.25,.46,.45,.94) both;
         animation:tilt-in-fwd-tl .7s cubic-bezier(.25,.46,.45,.94) both;
-
         color: $secondColor;
         font-weight: bold;
         font-style: normal;
         font-weight: 600;
-        font-size: 80px;
+        font-size: 75px;
         line-height: 80px;
         margin-bottom: 20px;
         margin-top: 20px;
@@ -53,8 +51,13 @@ body {
         justify-content: start;
 
         @include tablet {
-            font-size: 70px;
-            line-height: 70px;
+            font-size: 60px;
+            line-height:65px;
+        }
+
+        @include mobile{
+            font-size: 50px;
+            line-height: 50px;
         }
     }
 

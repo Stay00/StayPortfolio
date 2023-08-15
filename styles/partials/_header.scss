@@ -10,7 +10,7 @@ header {
     }
 
     .nav-menu {
-        display: flex;
+        display: flex; 
         list-style-type: none;
         gap: 1rem;
 
@@ -64,8 +64,8 @@ header {
             bottom: 0;
             background-color: $secondColor;
             padding: 1rem;
-            box-shadow: 0 0 0 100vmax $thirdColor;
-            z-index: 1;
+            box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);        
+            z-index: 1;    
 
         }
 
@@ -78,13 +78,14 @@ header {
             flex-direction: column;
             align-items: end;
             background-color: $secondColor;
+            
 
             a {
-                color: $mainColor;
-                background-color: $secondColor;
+                color: $mainColor;                
                 padding-bottom: 15px;
                 padding-top: 15px;
                 font-size: 18px;
+                background-color: $secondColor;
             }
         }
 

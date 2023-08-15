@@ -5,7 +5,7 @@
     background: $mainColor;
     width: 900px;
     height: 520px;
-    padding-inline: 3rem;
+    padding-inline: 2rem;
     padding-block: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -19,11 +19,12 @@
     @include tablet {
         display: flex;
         flex-direction: column;
-        margin: 15px;
         justify-content: center;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         width: 100%;
         height: auto;
+        padding-inline: 1rem;
+        
     }
 
     .contact_text_container {
@@ -43,7 +44,7 @@
             margin-bottom: 50px;
 
             @include tablet {
-                font-size: 13px;
+                font-size: 15px;
                 margin-bottom: 30px;
             }
         }
@@ -70,6 +71,14 @@
         display: flex;
         flex-direction: column;
 
+        .form-control {
+            @include tablet {
+                font-size: 13px;
+                
+            }
+        }
+
+
         .form_subtitle {
             margin-bottom: 10px;
             font-weight: 600;
@@ -92,6 +101,13 @@
             font-size: 17px;
             font-style: normal;
             font-weight: 400;
+
+            @include tablet {
+                font-size: 15px;
+                width: 184px;
+                height: 47px;
+                
+            }
 
             a {
                 text-decoration: none;
