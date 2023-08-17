@@ -28,6 +28,18 @@
         align-items: center;
         justify-self: center;
         text-align: center;
+
+        img {
+        width: 600px;
+        height: 405px;
+
+        @include mobile {
+        width: 300px;
+        height: 205px;
+
+        }
+        }
+        
     }
 
     .about_info {
